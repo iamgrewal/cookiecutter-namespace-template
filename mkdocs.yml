@@ -1,0 +1,51 @@
+site_name: LLM Ingestion Pipeline
+theme:
+  name: material
+
+# Use the Awesome Pages plugin for better navigation structure
+nav:
+  - Home: index.md
+  - About: about.md
+  - Prompts: prompts/index.md
+  - API Reference: reference/ 
+
+plugins:
+  - search
+  - autorefs
+  - gen-files:
+      scripts:
+        - gen_pages.py
+  - llm_plugin:
+      module_name: plugins.llm_plugin
+  - mkdocstrings:
+      enabled: !ENV [ENABLE_MKDOCSTRINGS, true]
+      custom_templates: templates
+      default_handler: python
+      handlers:
+        python:
+          options:   
+            docstring_style: google
+            show_source: true
+            show_signature: true
+  - awesome-pages:
+      # Collapse single pages in the navigation
+      collapse_single_pages: true 
+       # Other options:
+      - sort_pages: true  # Sort pages alphabetically
+      - sort_nav: true   # Sort navigation items alphabetically
+      - remove_empty_folders: true
+  - material-extensions:
+      # Add a highlight.js extension for code highlighting
+      - highlighter
+      - admonition
+      - anchor     # For generating anchors for headings
+      - attribute_lists  # For attribute lists in tables
+      - def_list   # For definition lists
+      - footnotes  # For footnotes
+      - md_in_html # For embedding Markdown in HTML
+      - meta       # For metadata in pages
+      - sane_list
+  - mermaid2:
+      javascript: https://unpkg.com/mermaid@10.4.0/dist/mermaid.esm.min.mjs
+   
+        
