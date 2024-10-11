@@ -51,3 +51,4 @@ dependencies:
     - sphinx-inline-tabs
     - sphinx-autobuild
     - mkdocs-autorefs
+    - mkdocs-mermaid2-plugin
