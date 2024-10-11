@@ -1,4 +1,4 @@
-# Cookiecutter Namespace Template
+#Cookiecutter Namespace Template
 
 This Cookiecutter template provides a foundation for creating Python namespace packages, enhanced with additional setup and automation features.
 
