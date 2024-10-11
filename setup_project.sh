@@ -51,14 +51,30 @@ cookiecutter_json='
   "namespace": "{{ cookiecutter.project_slug.split('.')[0] }}",
   "package_name": "{{ cookiecutter.project_slug.split('.')[1] }}",
   "project_short_description": "Python Namespace Package contains all you need to create a Python namespace package.",
-  "pypi_username":    "'"$USERNAME"'",
+  "pypi_username": "iamgrewal",
   "use_pytest": "y",
   "use_black": "y",
   "command_line_interface": ["Typer", "Click", "Argparse", "No command-line interface"],
   "version": "0.1.0",
   "create_author_file": "y",
   "license": ["MIT", "BSD-2-Clause", "BSD-3-Clause", "Apache-2.0", "GPL-3.0-only", "GPL-3.0-or-later", "Other/Proprietary License"],
-  "_copy_without_render": [".github/workflows/pre-commit.yml"]
+  "_copy_without_render": [".github/workflows/pre-commit.yml"],
+  "include_github_actions": ["y", "n"],
+  "publish_to": ["pypi", "artifactory", "none"],
+  "typechecking": ["mypy", "pyright"],
+  "deptry": ["y", "n"],
+  "mkdocs": ["y", "n"],
+  "codecov": ["y", "n"],
+  "dockerfile": ["y", "n"],
+  "devcontainer": ["y", "n"],
+  "open_source_license": [
+    "MIT license",
+    "BSD license",
+    "ISC license",
+    "Apache Software License 2.0",
+    "GNU General Public License v3",
+    "Not open source"
+  ]
 }
 '
 
