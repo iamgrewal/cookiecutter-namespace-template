@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v5   
     - uses: actions/cache@v4
       with:
         path: ~/.cache/pre-commit
         key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
-    - uses: pre-commit/action@v3.0.1
+    - uses: pre-commit/action@v3.0.1   
 
   tests:
     name: Tests on ${{ matrix.python-version }}
@@ -29,6 +29,7 @@ jobs:
       fail-fast: false
       matrix:
         python-version:
+          - "3.8" # Added Python 3.8
           - "3.9"
           - "3.10"
           - "3.11"
@@ -44,3 +45,18 @@ jobs:
         run: python -m pip install tox
       - name: Run tests
         run: python -m tox
+
+  lint:  # Added linting job
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version:    "3.10"  # You can choose a specific version
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+      - name: Run linter
+        run: flake8 .
