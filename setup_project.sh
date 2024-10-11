@@ -89,5 +89,6 @@ mv "$TEMP_FILE" cookiecutter.json
 
 # --- Run cookiecutter ---
 cookiecutter .
+make install
 
 echo "Project setup complete!"
