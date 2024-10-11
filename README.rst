@@ -1,80 +1,64 @@
-===============================
-Cookiecutter Namespace Template
-===============================
+#Cookiecutter Namespace Template
 
-.. preface
+This Cookiecutter template provides a foundation for creating Python namespace packages, enhanced with additional setup and automation features.
 
-`Cookiecutter <https://github.com/cookiecutter/cookiecutter>`_ Namespace
-Template for a Python package.
+## Features
 
-|Downloads| |Versions| |Contributors| |License| |pre-commit.ci status| |Docs|
+* **Namespace package structure:** Sets up a well-organized structure for your Python namespace package.
+* **Conda environment:** Includes an `environment.yml` file to create a Conda environment with all the necessary dependencies.
+* **Automated setup:** Provides a `setup_project.sh` script that automates:
+    * Conda environment creation
+    * User authentication with Git
+    * Project customization by updating `cookiecutter.json`
+    * Running Cookiecutter to generate the project
+* **Testing:** Includes testing setup with `unittest` or `pytest` and `tox` for testing across different Python versions.
+* **Documentation:** Sphinx setup for generating documentation.
+* **Version bumping:** `bump2version` for easy version management.
+* **Licensing:** Options for different open-source licenses.
+* **CI/CD:** GitHub Actions workflows for testing and optional PyPI release.
 
-.. |Downloads| image:: https://pepy.tech/badge/cookiecutter-namespace-template
-   :target: https://pepy.tech/project/cookiecutter-namespace-template
-.. |Versions| image:: https://img.shields.io/pypi/pyversions/cookiecutter-namespace-template.svg
-   :target: https://pypi.org/project/cookiecutter-namespace-template/
-.. |Contributors| image:: https://img.shields.io/github/contributors/veit/cookiecutter-namespace-template.svg
-   :target: https://github.com/veit/cookiecutter-namespace-template/graphs/contributors
-.. |License| image:: https://img.shields.io/github/license/veit/cookiecutter-namespace-template.svg
-   :target: https://github.com/veit/cookiecutter-namespace-template/blob/main/LICENSE
-.. |pre-commit.ci status| image:: https://results.pre-commit.ci/badge/github/veit/cookiecutter-namespace-template/main.svg
-   :target: https://results.pre-commit.ci/latest/github/veit/cookiecutter-namespace-template/main
-.. |Docs| image:: https://readthedocs.org/projects/cookiecutter-namespace-template/badge/?version=latest
-   :target: https://cookiecutter-namespace-template.readthedocs.io/en/latest/
+## Quickstart
 
-Features
---------
+1.  **Install Cookiecutter and cruft:**
 
-.. Keep python versions of tox in sync with tox.ini.
+    ```bash
+    python -m pip install -U cookiecutter cruft
+    ```
 
-* Testing setup with ``unittest`` or ``pytest``
-* `Tox <https://tox.wiki/en/latest/>`_ testing: Setup to easily test for Python
-  3.9, 3.10, 3.11, 3.12, 3.13, and pypy.
-* `Sphinx <http://www.sphinx-doc.org/>`_ docs: Documentation ready for
-  generation with, for example, ReadTheDocs_
-* `Bump My Version <https://github.com/callowayproject/bump-my-version>`_:
-  Pre-configured version bumping with a single command
-* If the `cookiecutter-namespace-template
-  <https://github.com/veit/cookiecutter-namespace-template>`_ project template
-  has been changed, you can apply these changes with
+2.  **Generate a project:**
 
-  .. code-block:: console
+    ```bash
+    python -m cruft create [https://github.com/iamgrewal/cookiecutter-namespace-template.git](https://github.com/iamgrewal/cookiecutter-namespace-template.git)
+    ```
 
-     $ cruft update
+3.  **Run the setup script:**
 
-* Optional auto-release to `PyPI <https://pypi.org/>`_ when you push a new tag
-  to main (optional)
-* Optional command line interface using `Typer <https://typer.tiangolo.com>`_ or
-  `Click <https://palletsprojects.com/p/click/>`_
+    ```bash
+    bash setup_project.sh
+    ```
 
-Quickstart
-----------
+    This script will guide you through:
+    * Creating the Conda environment
+    * Entering your GitHub credentials
+    * Providing project details (name, description, etc.)
 
-#. Install the latest Cookiecutter if you haven’t installed it yet (this
-   requires Cookiecutter 1.4.0 or higher):
+4.  **Customize (if needed):**
+    * Modify any generated files to further tailor the project to your needs.
 
-   .. code-block:: console
+## Contributing
 
-      $ python -m pip install -U cruft
+If you have improvements or suggestions for this template, feel free to fork the repository and submit a pull request.
 
-#. Generate a Python package project:
+## License
 
-   .. code-block:: console
 
-      $ python -m cruft create https://github.com/veit/cookiecutter-namespace-template.git
+**Key changes**
 
-#. Create a repo and put it there.
+*   Updated description:  Reflects the focus on namespace packages and the added features.
+*   Conda environment:  Highlights the inclusion of the `environment.yml` file.
+*   Automated setup:  Explains the role of the `setup_project.sh` script.
+*   Clearer quickstart:  Provides step-by-step instructions on how to use the template, including running the setup script.
+*   Contributing section:  Encourages contributions and pull requests.
+*   License:  Reminds you to add the appropriate license information.
 
-#. `Register <https://pypi.org/account/register/>`_ your project with PyPI.
-
-#. Add the repo to your `ReadTheDocs <https://readthedocs.io/>`_ account and
-   turn on the ReadTheDocs service hook.
-
-#. Release your package by pushing a new tag to main.
-
-Pull requests
-~~~~~~~~~~~~~
-
-If you have differences in your preferred setup, I encourage you to fork this
-to create your own version. I also accept pull requests on this, if they’re
-small, atomic, and if they make my own packaging experience better.
+ 

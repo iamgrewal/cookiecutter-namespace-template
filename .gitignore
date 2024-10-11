@@ -1,21 +1,32 @@
+example-project
+cookiecutter-poetry-example
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# OSX useful to ignore
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# OSX
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-# Thumbnails
 ._*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
-.TemporaryItems
+.TemporaryItems   
+
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
@@ -24,7 +35,8 @@ __pycache__/
 .AppleDB
 .AppleDesktop
 Network Trash Folder
-Temporary Items
+Temporary Items   
+
 .apdisk
 
 # C extensions
@@ -45,14 +57,30 @@ parts/
 sdist/
 var/
 *.egg-info/
-.installed.cfg
+.installed.cfg   
+
 *.egg
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# IDE/Editors
+.spyderproject
+.spyproject
+.ropeproject
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+.vscode/
+
+# Build tools
+target/
+
+# Type checkers
+.pyre/
+.pytype/
+
+# Cython debug symbols
+cython_debug/
 
 # Installer logs
 pip-log.txt
@@ -74,24 +102,39 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# Django   
+
 *.log
 
 # Sphinx documentation
 docs/_build/
 
-# IntelliJ Idea family of suites
-.idea
-*.iml
-## File-based project format:
-*.ipr
-*.iws
-## mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# PyBuilder
-target/
+# PyInstaller
+*.manifest
+*.spec
 
 # Cookiecutter
 output/
 python_boilerplate/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation
+/site
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Large language model (LLM) specific files (add more as needed)
+*.pb  # Saved model files (e.g., TensorFlow)
+*.ckpt  # Model checkpoint files
+*.bin  # Binary model files
+*.onnx  # ONNX model files
+*.pt  # PyTorch model files
+
+# Data (consider adding specific data file extensions)
+# data/raw/
+# data/processed/

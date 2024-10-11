@@ -1,0 +1,54 @@
+name: ${PROJECT_NAME}_env
+channels:
+  - default
+  - conda-forge
+channel_priority: flexible
+dependencies:
+  - jinja2=3.1.4=pyhd8ed1ab_0
+  - markdown-it-py=3.0.0=pyhd8ed1ab_0
+  - markupsafe=3.0.1=py310h89163eb_1
+  - poetry=1.8.3=linux_pyha804496_1
+  - poetry-core=1.9.0=pyhd8ed1ab_0
+  - poetry-plugin-export=1.8.0=pyhd8ed1ab_0
+  - python=3.10.14=hd12c33a_0_cpython
+  - python-fastjsonschema=2.20.0
+  - typer=0.12.5=pyhd8ed1ab_0
+  - typer-slim=0.12.5=pyhd8ed1ab_0
+  - typer-slim-standard=0.12.5=hd8ed1ab_0
+  - typing-extensions=4.12.2=hd8ed1ab_0
+  - pip:
+    - requests==2.28.1
+    - mkdocs-gen-files==0.5.0
+    - mkdocs-get-deps==0.2.0
+    - more-itertools==10.4.0
+    - msgpack==1.0.8
+    - poetry-conda==0.1.2
+    - pyproject-hooks==1.1.0
+    - python-dateutil==2.9.0.post0
+    - pyyaml-env-tag==0.1
+    - rapidfuzz==3.9.7
+    - trove-classifiers==2024.7.2
+    - urllib3==2.2.2
+    - flake8
+    - pylint
+    - pytest
+    - mkdocs
+    - "mkdocstrings[python]"
+    - mkdocs-material
+    - mkdocstrings
+    - pylint
+    - sphinx
+    - sphinx-rtd-theme
+    - sphinxcontrib-napoleon
+    - black
+    - isort
+    - cookiecutter
+    - mkdocs-awesome-pages-plugin
+    - mkdocs-material-extensions
+    - mkdocs-mermaid2-plugin
+    - sphinx-gallery
+    - sphinx-copybutton
+    - sphinx-inline-tabs
+    - sphinx-autobuild
+    - mkdocs-autorefs
+    - mkdocs-mermaid2-plugin

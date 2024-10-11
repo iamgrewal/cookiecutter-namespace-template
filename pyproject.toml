@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling", "hatch-vcs"]
+requires = ["hatchling", "hatch-vcs", "poetry-core>=1.0.0"]
 build-backend = "hatchling.build"
 
 [tool.hatch.version]
@@ -12,12 +12,12 @@ packages = ["."]
 [project]
 name = "cookiecutter-namespace-template"
 dynamic = ["version"]
-description = "Cookiecutter template for a Python namespace package"
-readme = "README.rst"
-authors = [{ name = "Veit Schiele", email = "veit@cusy.io" }]
+description = "Cookiecutter template for a Python namespace package with enhanced setup and automation."
+readme = "README.md"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
 license = "BSD-3-Clause"
 requires-python = ">=3.9"
-keywords = ["cookiecutter", "template", "package"]
+keywords = ["cookiecutter", "template", "package", "namespace", "conda"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
@@ -34,48 +34,159 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries :: Python Modules"
 ]
-dependencies = [
-    "cookiecutter"
-]
+
+[tool.poetry]
+name = "cookiecutter-namespace-template"
+version = "0.1.0"
+description = "Cookiecutter template for a Python namespace package with enhanced setup and automation."
+authors = ["Your Name <your.email@example.com>"]
+license = "BSD-3-Clause"
+readme = "README.md"
+repository = "https://github.com/iamgrewal/cookiecutter-namespace-template"
+documentation = "https://cookiecutter-namespace-template.readthedocs.io/"
+keywords = ['cookiecutter', 'template', 'poetry']
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+jinja2 = "3.1.4"
+markdown-it-py = "3.0.0"
+markupsafe = "3.0.1"
+poetry = "1.8.3"
+poetry-core = "1.9.0"
+poetry-plugin-export = "1.8.0"
+python-fastjsonschema = "2.20.0"
+typer = "0.12.5"
+typer-slim = "0.12.5"
+typer-slim-standard = "0.12.5"
+typing-extensions = "4.12.2"
+requests = "2.28.1"
+mkdocs-gen-files = "0.5.0"
+mkdocs-get-deps = "0.2.0"
+more-itertools = "10.4.0"
+msgpack = "1.0.8"
+poetry-conda = "0.1.2"
+pyproject-hooks = "1.1.0"
+python-dateutil = "2.9.0.post0"
+pyyaml-env-tag = "0.1"
+rapidfuzz = "3.9.7"
+trove-classifiers = "2024.7.2"
+urllib3 = "2.2.2"
+flake8 = "*"
+pylint = "*"
+pytest = "*"
+mkdocs = "*"
+mkdocstrings = { version = "*", extras = ["python"] }
+mkdocs-material = "*"
+sphinx = "*"
+sphinx-rtd-theme = "*"
+sphinxcontrib-napoleon = "*"
+black = "*"
+isort = "*"
+cookiecutter = "*"
+mkdocs-awesome-pages-plugin = "*"
+mkdocs-material-extensions = "*"
+mkdocs-mermaid2-plugin = "*"
+sphinx-gallery = "*"
+sphinx-copybutton = "*"
+sphinx-inline-tabs = "*"
+sphinx-autobuild = "*"
+mkdocs-autorefs = "*"
+
+[tool.poetry.scripts]
+ccp = 'cookiecutter_namespace_template.cli:main'
 
 [project.optional-dependencies]
 tests = [
     "pytest",
     "pytest-cookies",
-    "tox",
+    "tox"
 ]
 docs = [
     "sphinx",
     "furo",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-napoleon"
 ]
 dev = [
     "cookiecutter-namespace-template[tests, docs]",
     "pre-commit",
     "codespell",
-    "tomli; python_version < '3.11'"
+    "tomli; python_version < '3.11'",
+    "flake8",
+    "black",
+    "isort"
 ]
 
 [project.urls]
 Documentation = "https://cookiecutter-namespace-template.readthedocs.io/"
-"Bug Tracker" = "https://github.com/veit/cookiecutter-namespace-template/issues"
-"Source Code" = "https://github.com/veit/cookiecutter-namespace-template"
+"Bug Tracker" = "https://github.com/iamgrewal/cookiecutter-namespace-template/issues"
+"Source Code" = "https://github.com/iamgrewal/cookiecutter-namespace-template"
 
 [tool.black]
 line-length = 79
 
 [tool.isort]
-atomic=true
-force_grid_wrap=0
-include_trailing_comma=true
-lines_after_imports=2
-lines_between_types=1
-multi_line_output=3
-not_skip="__init__.py"
-use_parentheses=true
-
-known_first_party="cookiecutter-namespace-template"
+atomic = true
+force_grid_wrap = 0
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+multi_line_output = 3
+not_skip = "__init__.py"
+use_parentheses = true
+known_first_party = "cookiecutter-namespace-template"
 
 [tool.codespell]
 ignore-words-list = ["ninjs"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+files = ["cookiecutter_namespace_template"]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+show_error_codes = true
+
+[tool.ruff]
+target-version = "py37"
+line-length = 120
+fix = true
+
+[tool.ruff.lint]
+select = [
+    "YTT",  # flake8-2020
+    "S",    # flake8-bandit
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "C4",   # flake8-comprehensions
+    "T10",  # flake8-debugger
+    "SIM",  # flake8-simplify
+    "I",    # isort
+    "C90",  # mccabe
+    "E", "W", # pycodestyle
+    "F",    # pyflakes
+    "PGH",  # pygrep-hooks
+    "UP",   # pyupgrade
+    "RUF",  # ruff
+    "TRY"   # tryceratops
+]
+ignore = [
+    "E501",  # LineTooLong
+    "E731"   # DoNotAssignLambda
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S603"]
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]
+
