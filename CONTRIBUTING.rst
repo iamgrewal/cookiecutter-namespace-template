@@ -13,7 +13,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/veit/cookiecutter-namespace-template/issues
+Report bugs at https://github.com/iamgrewal/cookiecutter-namespace-template/issues
 If you are reporting a bug, please include:
 
 * Your operating system name and version.
@@ -43,7 +43,7 @@ Submit Feedback
 ~~~~~~~~~~~~~~~
 
 The best way to send feedback is to file an issue at
-https://github.com/veit/cookiecutter-namespace-template/issues.
+https://github.com/iamgrewal/cookiecutter-namespace-template/issues.
 
 If you are proposing a new feature:
 
@@ -67,7 +67,7 @@ and ready to go.
    .. code-block:: bash
 
     $ cd path/for/the/repo
-    $ git clone git@github.com:YOUR_NAME/cookiecutter-namespace-template.git
+    $ git clone git@github.com:iamgrewal/cookiecutter-namespace-template.git
 
 #. You can create a new environment for your local development by typing:
 
