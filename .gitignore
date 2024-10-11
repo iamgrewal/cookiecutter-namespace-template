@@ -1,9 +1,11 @@
 example-project
 cookiecutter-poetry-example
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
 # Environments
 .env
 .venv
@@ -12,19 +14,19 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-# OSX useful to ignore
+
+# OSX
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-# Thumbnails
 ._*
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
-.TemporaryItems
+.TemporaryItems   
+
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
@@ -33,7 +35,8 @@ venv.bak/
 .AppleDB
 .AppleDesktop
 Network Trash Folder
-Temporary Items
+Temporary Items   
+
 .apdisk
 
 # C extensions
@@ -54,28 +57,30 @@ parts/
 sdist/
 var/
 *.egg-info/
-.installed.cfg
+.installed.cfg   
+
 *.egg
 
-# Spyder project settings
+# IDE/Editors
 .spyderproject
 .spyproject
-
-# Rope project settings
 .ropeproject
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+.vscode/
 
-# mkdocs documentation
-/site
+# Build tools
+target/
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# Type checkers
+.pyre/
+.pytype/
+
+# Cython debug symbols
+cython_debug/
 
 # Installer logs
 pip-log.txt
@@ -97,42 +102,39 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
+# Django   
+
 *.log
 
 # Sphinx documentation
 docs/_build/
 
-# IntelliJ Idea family of suites
-.idea
-*.iml
-## File-based project format:
-*.ipr
-*.iws
-## mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# PyBuilder
-target/
-# Pyre type checker
-.pyre/
-
-# pytype static type analyzer
-.pytype/
-
-# Cython debug symbols
-cython_debug/
-
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
-
-# Exclude vscode config files
-.vscode/
+# PyInstaller
+*.manifest
+*.spec
 
 # Cookiecutter
 output/
 python_boilerplate/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Documentation
+/site
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Large language model (LLM) specific files (add more as needed)
+*.pb  # Saved model files (e.g., TensorFlow)
+*.ckpt  # Model checkpoint files
+*.bin  # Binary model files
+*.onnx  # ONNX model files
+*.pt  # PyTorch model files
+
+# Data (consider adding specific data file extensions)
+# data/raw/
+# data/processed/
