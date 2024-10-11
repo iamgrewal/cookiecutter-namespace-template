@@ -61,8 +61,8 @@ root_doc = "index"
 
 # General information about the project.
 project = "cookiecutter-namespace-template"
-author = "Veit Schiele"
-copyright = f"2017–2024, {author}"
+author = "Jatinder Grewal"
+copyright = f"2024, {author}"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -203,15 +203,15 @@ html_static_path = ["_static"]
 # Sphinx supports the following languages:
 #   'da', 'de', 'en', 'es', 'fi', 'fr', 'h', 'it', 'ja'
 #   'nl', 'no', 'pt', 'ro', 'r', 'sv', 'tr'
-# html_search_language = 'en'
+html_search_language = 'en'
 
 # A dictionary with options for the search language support, empty by default.
 # Now only 'ja' uses this config value
-# html_search_options = {'type': 'default'}
+html_search_options = {'type': 'default'}
 
 # The name of a javascript file (relative to the configuration directory) that
 # implements a search results scorer. If empty, the default will be used.
-# html_search_scorer = 'scorer.js'
+html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = "cookiecutter-namespace-template-doc"
@@ -237,7 +237,7 @@ latex_documents = [
         root_doc,
         "cookiecutter-namespace-template.tex",
         "cookiecutter-namespace-template Documentation",
-        "Veit Schiele",
+        "Jatinder Grewal",
         "manual",
     ),
 ]
