@@ -43,3 +43,11 @@ dependencies:
     - black
     - isort
     - cookiecutter
+    - mkdocs-awesome-pages-plugin
+    - mkdocs-material-extensions
+    - mkdocs-mermaid2-plugin
+    - sphinx-gallery
+    - sphinx-copybutton
+    - sphinx-inline-tabs
+    - sphinx-autobuild
+    - mkdocs-autorefs
