@@ -51,6 +51,6 @@ For Every Release
       out what broke the formatting.
 
 #. Edit the release on GitHub
-   (e.g. https://github.com/veit/cookiecutter-namespace-template/releases).
+   (e.g. https://github.com/iamgrewal/cookiecutter-namespace-template/releases).
    Paste the release notes into the release's release page, and come up with a
    title for the release.
